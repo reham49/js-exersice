@@ -1,0 +1,211 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="css/all.min.css"/>
+    <link  rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link  rel="stylesheet" href="css/index_style.css"/>
+    <style>
+     
+    </style>
+
+</head>
+<body>
+
+ 
+<header class="vh-100 d-flex flex-wrap align-items-start justify-content-center position-relative">
+  <div class="date-info">
+    <h1 id="clock"></h1>
+    <h1 id="today"></h1>
+</div>
+
+  <nav class="navbar navbar-expand-lg w-100  navbar-dark bg-opacity fixed-top">
+    <a class="navbar-brand" href="#">
+
+      <img src="images/restaurant.png" class="logo" alt="spice resturant logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">pizza<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">hamburger</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link">popcorn</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link">pasta</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link">seafood</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link">ice cream</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link">blueberry</a>
+      </li>
+      
+      </ul>
+    
+    </div>
+  </nav>
+
+</header> 
+
+<div class="container py-5">
+  <h1 class="text-center">Receipts</h1>
+  <div class="row" id="receiptsRow">
+      
+  </div>
+</div>
+
+
+
+    <hr/>
+ <div class="container py-3">
+   <h1>Empolyees</h1>
+    <div>
+      <div class="form-group">
+          <label>Empolyee Name:</label>
+          <input   id="name" class="mb-2 form-control"/>
+          <div class="alert alert-danger name-alert">name should start with capital letter followed by 2-8 small letters</div>
+
+      </div>
+      <div class="form-group">
+          <label>Empolyee Age:</label>
+          <input  id="age" class="form-control"/>
+          <div class="alert alert-danger age-alert">age should be from 20 to 80</div>
+
+      </div>
+      <div class="form-group">
+          <label>Empolyee Phone:</label>
+          <input  id="phone" class="form-control"/>
+          <div class="alert alert-danger phone-alert">phone should be valid mob. number</div>
+
+      </div>
+      <div class="form-group">
+          <label>Empolyee Title:</label>
+          <textarea id="title" class="form-control"></textarea>
+      </div>
+     
+      <button  id="addBtn" class="btn btn-info float-right">add Empolyee</button>
+
+      <div class="clearfix"></div>
+         
+    </div>
+
+    <div class="btnContainer my-3">
+      <button class="button list active" onclick="listView()"><i class="fa fa-bars"></i> List</button> 
+      <button class="button grid" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+    </div>
+    <input onkeyup="search(this.value)" placeholder="search" class="form-control" />
+
+
+    <table class="table my-3 list-table">
+       <thead>
+         <th>Empolyee Name</th>
+         <th>Empolyee Age</th>
+         <th>Empolyee Phone</th>
+         <th>Empolyee Title</th>
+         <th></th>
+
+       </thead>
+       <tbody id="tableBody">
+
+       </tbody>
+    </table>
+    <div id="dataRow" class="row my-3 grid-row">
+      
+    </div>
+  </div> 
+
+<hr/>
+  <div class="container py-5">
+    <div class="row">
+       <div class="col-md-4 mb-3">
+         <div class="item">
+           <img class="img-fluid" src="images/portfolio-1.jpg">
+           <div class="item-caption">
+             <h4>item title</h4>
+             <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+           </div>
+         </div>
+       </div>
+       <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-3.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-4.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-3.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-1.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="item">
+          <img class="img-fluid" src="images/portfolio-4.jpg">
+          <div class="item-caption">
+            <h4>item title</h4>
+            <p>lputate at, tempus viverra turpis. Fusce condimentum nunc acs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay-container d-flex justify-content-center align-items-center">
+        <i id="wClose" class="fa fa-2x fa-window-close"></i>
+        <div class="overlay-inner d-flex  align-items-center justify-content-between">
+            <i id="prev" class="fas fa-2x fa-2x fa-arrow-alt-circle-left"></i>
+
+            <i id="next" class="fas fa-2x fa-2x fa-arrow-alt-circle-right"></i>
+
+        </div>
+  </div>
+  
+
+
+  
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/index.js"></script>
+    
+
+</body>
+</html>
